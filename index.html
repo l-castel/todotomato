@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div class="outpaper">
+    <div id="inpaper" class="inpaper">
+        <form onsubmit="return false">
+            <button type="button" class="add" onclick="if(text.value != ''){spawn()}" onsubmit="ente"><span>ADD</span></button>
+            <input id="text" class="name" type="text" onkeypress="this.style.width = ((this.value.length + 2) * 8) + 'px';">
+        </form>
+      
+     
+            
+        
+    </div>
+</div>
+
+<script>
+    var text = document.getElementById("text");
+    var inpaper = document.getElementById("inpaper");
+    function spawn(){
+        var spawn = document.createElement("div");
+        spawn.classList.add("spawn");
+        var check = document.createElement("input");
+        check.type = "checkbox";
+        check.classList.add("check");
+        var todo = document.createElement("p");
+        todo.classList.add("todo");
+        todo.innerHTML= text.value;
+       
+        spawn.appendChild(check);
+        spawn.appendChild(todo);
+        
+        
+        
+      
+       
+        
+        inpaper.appendChild(spawn);
+    }
+</script>
+</body>
+</html>
