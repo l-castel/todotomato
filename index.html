@@ -12,7 +12,7 @@
 <div class="outpaper">
     <div id="inpaper" class="inpaper">
         <form onsubmit="return false">
-            <button type="button" class="add" onclick="if(text.value != ''){spawn()}" onsubmit="ente"><span>ADD</span></button>
+            <button type="button" class="add" onclick="if(text.value != ''){spawn(); text.value = '';}"><span>ADD</span></button>
             <input id="text" class="name" type="text" onkeypress="this.style.width = ((this.value.length + 4) * 8) + 'px';">
         </form>
       
